@@ -37,7 +37,8 @@ namespace project1.Controllers
                         Name = rvm.Name
 
                     };
-                    db.Users.Add(user);
+
+                db.Users.Add(user);
                     db.SaveChanges();
                     db.UserRoles.Add(new UserRole()
                     {

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<project1.Models.Company>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="pull-right">
+@using (Html.BeginForm("Index", "Companies", FormMethod.Get))
+{
+    @Html.TextBox("q", "", new { placeholder = "Search..." });
+    
+        <button type="submit" class="btn btn-primary"  >GO</button>
+   
+}
+    </div>
+<br/>
+<table class="table">
+    <tr>
+        <th>
+        <a href="~/Companies?order=name">
+                Name
+    
+        </a>
+            </th>
+        <th>
+            <a href="~/Companies?order=Email">
+                Email
+                </a>
+</th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phoneno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactPerson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FacebookURL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phoneno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactPerson)
+        </td>
+        <td>
+            <a href="@item.CompanyURL">@item.CompanyURL</a>
+           
+        </td>
+        <td>
+            <img height="50" width="100" src="@Html.DisplayFor(modelItem => item.Logo)" />
+          <!--  Html.DisplayFor(modelItem => item.Logo) -->
+        </td>
+        <td>
+            <a href="@item.FacebookURL">@item.FacebookURL</a>
+        </td>
+        <td>
+            
+            @Html.ActionLink("Edit", "Edit", new { id=item.CompanyId}, new { @class = "btn btn-default" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CompanyId }, new { @class = "btn btn-default" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CompanyId }, new { @class = "btn btn-default" }) |
+            
+            <a href="@Url.Action("sendmail","Recruit")" class="btn btn-primary">ReqLFA</a>
+        
+        </td>
+    </tr>
+}
+
+</table>
+

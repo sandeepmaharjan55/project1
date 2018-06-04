@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace project1.Areas.Admin.Controllers
 {
-    [Authorize(Roles ="Admin,User")]
+    [Authorize(Roles ="Admin")]
     public class AdminController:Controller
     {
     }

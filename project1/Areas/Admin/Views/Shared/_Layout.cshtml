@@ -16,17 +16,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Admin Interface", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                 </ul>
-                
-            </div>
-            <div class="pull-right">
-                <a href="~/Login/Logout"> Logout</a>
+               @*
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="~/Login/Logout"> Logout</a>
+                    <li>@Html.ActionLink("Logout", "Logout", "Login")</li>
+
+                </ul>
+                *@
+                @Html.Partial("_LoginPartial")
             </div>
            
+           @* <div class="pull-right">
+
+                    <a href="~/Login/Logout"> Logout</a>
+    </div>*@
         </div>
     </div>
     

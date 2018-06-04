@@ -1,0 +1,82 @@
+﻿@model project1.Models.Company
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phoneno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phoneno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactPerson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactPerson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyURL)
+        </dt>
+
+        <dd>
+
+            <a href="@Model.CompanyURL">
+                @Html.DisplayFor(model => model.CompanyURL)
+                </a>
+</dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logo)
+        </dt>
+
+        <dd>
+            <img src="@Model.Logo" height="100" width="100" />
+        
+        </dd>
+
+        <dt>
+          
+                @Html.DisplayNameFor(model => model.FacebookURL)
+                
+</dt>
+
+        <dd>
+            <a href="@Model.FacebookURL">
+                @Html.DisplayFor(model => model.FacebookURL)
+            </a>
+</dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", "Companies", new { id = Model.CompanyId },new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index", "Companies", new { @class = "btn btn-primary" })
+</p>
