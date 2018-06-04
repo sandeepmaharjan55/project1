@@ -14,6 +14,10 @@ namespace project1.Models
         public DateTime? ModifiedDate { get; set; }
         public bool Status { get; set; }
         public virtual ICollection<UserRole>Roles { get; set; }
+        public string Email { get; set; }
+        public string Gender { get; set; }
+        public string Contact { get; set; }
+        public string Name { get; set; }
     }
     public class Role
     { 

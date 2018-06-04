@@ -58,3 +58,4 @@ c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\bin\En
 c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\obj\Debug\project1.Migrations.InitialCreate.resources
 c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\obj\Debug\project1.csproj.GenerateResource.Cache
 c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\obj\Debug\project1.Migrations.InitialCreatePlus.resources
+c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\obj\Debug\project1.Migrations.ColumnUserAdded.resources

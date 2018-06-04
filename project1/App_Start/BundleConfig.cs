@@ -28,6 +28,13 @@ namespace project1
                       "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/dashboard").Include("~/Content/dashboard.css"));
+
+            bundles.Add(new StyleBundle("~/Content/login").Include(
+                "~/Content/login.css",
+                "~/Scripts/login.js"
+               ));
+
+
         }
     }
 }
