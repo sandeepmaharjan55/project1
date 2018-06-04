@@ -61,3 +61,5 @@ c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\obj\De
 c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\bin\Views\ApplicationInsights.config
 c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\obj\Debug\project1.Migrations.SkillAdded.resources
 c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\obj\Debug\project1.Migrations.CompaniesAdded.resources
+c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\obj\Debug\project1.Migrations.EducationFieldAddedInUser.resources
+c:\users\maharjan\documents\visual studio 2015\Projects\project1\project1\obj\Debug\project1.Migrations.DesignaFieldAddedInUser.resources

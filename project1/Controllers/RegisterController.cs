@@ -34,7 +34,9 @@ namespace project1.Controllers
                         AddedDate = DateTime.Now,
                         ModifiedDate = DateTime.Now,
                         Status = true,
-                        Name = rvm.Name
+                        Name = rvm.Name,
+                        Education=rvm.Education,
+                        Designation = rvm.Designation
 
                     };
 

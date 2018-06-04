@@ -45,6 +45,13 @@ namespace project1.ViewModels
         [Required]
         [Display(Name = "Name")]
         public string Name { get; set; }
+        [Required]
+        [Display(Name = "Education")]
+        public string Education { get; set; }
+        [Required]
+        [Display(Name = "Designation")]
+        public string Designation { get; set; }
+
 
     }
 }

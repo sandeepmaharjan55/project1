@@ -31,11 +31,17 @@ namespace project1.Controllers
                     {
                         return Redirect(ReturnUrl);
                     }
-                    else { return Redirect("~/Admin/Dashboard"); }
-                   
-
-
+                    else if (ReturnUrl == null && lvm.UserName=="admin")
+                    { return Redirect("~/Admin/Dashboard"); }
+                    else
+                    { 
+                        return Redirect("~/UProfile/PageProfile");
                 }
+
+
+
+
+            }
 
             }
             return View(lvm);

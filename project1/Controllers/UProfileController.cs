@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,15 @@ namespace project1.Controllers
 {
     public class UProfileController : Controller
     {
-        [Authorize(Roles ="User")]
+
         // GET: UProfile
-        public ActionResult PageProfile()
+        [Authorize(Roles = "User")]
+        public ActionResult PageProfile(int id)
         {
-            return View();
+            User user = new User()
+            { };
+            
+            return View(user.Id);
         }
     }
 }

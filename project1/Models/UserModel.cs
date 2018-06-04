@@ -18,6 +18,8 @@ namespace project1.Models
         public string Gender { get; set; }
         public string Contact { get; set; }
         public string Name { get; set; }
+        public string Education { get; set; }
+        public string Designation { get; set; }
         public virtual ICollection<UserToSkill> UserToSkills { get; set; }
     }
     public class Role
