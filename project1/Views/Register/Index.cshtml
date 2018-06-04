@@ -1,5 +1,170 @@
 ﻿@model project1.ViewModels.RegisterViewModel
+@Styles.Render("~/Content/login")
 
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body class="main">
+    <div class="login-screen"></div>
+    <div class="login-center">
+        <div class="container min-height" style="margin-top: 20px;">
+            <div class="row">
+                <div class="col-xs-4 col-md-offset-8">
+                    <div class="login" id="card">
+                        <div class="front signin_form">
+                            <p>Account Register</p>
+                            <div>@ViewBag.Error</div>
+
+
+
+
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+
+
+
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                                <form class="login-form">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                        <br />
+                                        <div class="input-group">
+                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-pencil"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                        <br />
+                                        <div class="input-group">
+                                            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-user"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                        <br />
+                                        <div class="input-group">
+                                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-lock"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                        <br />
+                                        <div class="input-group">
+                                            @Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control" } })
+
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-intersex"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                        <br />
+                                        <div class="input-group">
+                                            @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control" } })
+
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-list-alt"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <br />
+
+                                        <div class="input-group">
+                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-envelope"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   
+
+                                    <div class="form-group sign-btn">
+                                        <input type="submit" class="btn" value="Create">
+                                          </div>
+                                </form>
+
+                               }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Flip/1.0.18/jquery.flip.js"></script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*
 @{
     ViewBag.Title = "Register";
 }
@@ -71,7 +236,7 @@
         </div>
     </div>
 }
-
+*@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>

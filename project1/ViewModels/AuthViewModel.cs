@@ -22,7 +22,7 @@ namespace project1.ViewModels
     public class RegisterViewModel
     {
         [Required]
-        [Display(Name = "User Name")]
+        [Display(Name = "UserName")]
 
         public string UserName { get; set; }
 
