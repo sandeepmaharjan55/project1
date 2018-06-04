@@ -27,17 +27,10 @@ namespace project1.Controllers
                 if (Membership.ValidateUser(lvm.UserName, lvm.Password))
                 {
                     FormsAuthentication.SetAuthCookie(lvm.UserName ,true);
-                    
-                        if (lvm.UserName != "admin")
-                          {
-                            return Redirect("~/UProfile/PageProfile");
-                        }
-                       
-                        if (ReturnUrl != null)
-                        {
-                            return Redirect(ReturnUrl);
-                        }
-                   
+                    if (ReturnUrl != null)
+                    {
+                        return Redirect(ReturnUrl);
+                    }
                     else { return Redirect("~/Admin/Dashboard"); }
                    
 
