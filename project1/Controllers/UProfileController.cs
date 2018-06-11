@@ -12,12 +12,11 @@ namespace project1.Controllers
 
         // GET: UProfile
         [Authorize(Roles = "User")]
-        public ActionResult PageProfile(int id)
+        public ActionResult PageProfile()
         {
-            User user = new User()
-            { };
+           
             
-            return View(user.Id);
+            return View();
         }
     }
 }
